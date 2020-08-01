@@ -1,0 +1,82 @@
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height      : 100vh;
+    width           : 100%;
+    background-color: #262720;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.list-container {
+    display: flex;
+}
+
+.list-container a {
+    text-decoration : none;
+    background-color: #fff;
+    color           : #262720;
+    margin-right    : 24px;
+    font-size       : 18px;
+    width           : 50px;
+    height          : 50px;
+    border-radius   : 50%;
+    border          : 2px solid #fff;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    position        : relative;
+}
+
+.list-container a::after {
+    content      : "";
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    width        : 0;
+    height       : 0;
+    border-radius: 50%;
+    transition   : 0.4s;
+}
+
+/* hover effect */
+.list-container a:hover::after {
+    top   : 0;
+    left  : 0;
+    width : 100%;
+    height: 100%;
+}
+
+.list-container a:hover i {
+    z-index   : 2;
+    color     : #fff;
+    font-size : 32px;
+    transition: 0.4s;
+}
+
+/* Social media colors */
+
+.list-container a.facebook:hover::after {
+    background-color: #3b5999;
+}
+
+.list-container a.twitter:hover::after {
+    background-color: #55acee;
+}
+
+.list-container a.youtube:hover::after {
+    background-color: #ff0000;
+}
+
+.list-container a.linkedin:hover::after {
+    background-color: #0077b5;
+}
+
+.list-container a.googleplus:hover::after {
+    background-color: #dd4b39;
+}
